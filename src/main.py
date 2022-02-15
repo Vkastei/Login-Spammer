@@ -50,10 +50,10 @@ def login(email, password, row):
         try:
 
             email_field = driver.find_element(By.NAME, 'username')
-            # Entfernt alte Email
+            # Deletes old Email in Field
             email_field.send_keys(Keys.CONTROL, "a")
             email_field.send_keys(Keys.DELETE)
-            # Gibt Email Adresse ein
+            # enters Email
             email_field.send_keys(email)
 
             credit_print[0] = email
@@ -61,7 +61,7 @@ def login(email, password, row):
             # submit
             #driver.find_element(By.CLASS_NAME, 'primary-button').click()
 
-            # Gibt Passwort ein
+            # enters Password
             pass_field = driver.find_element(By.NAME, 'password')
             pass_field.send_keys(password)
 
